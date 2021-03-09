@@ -1,8 +1,10 @@
 <template>
-  <h1>Reactor</h1>
-  <button @click="start" :disabled="isPlaying">start game</button>
-  <Block v-if="isPlaying" :delay="delay" @end="end"/>
-  <Results v-if="showResults" :delay="delay" :score="score"/>
+  <div class="flex bg-gray-50">
+    <h1>Reactor</h1>
+    <button @click="start" :disabled="isPlaying">start game</button>
+    <Block v-if="isPlaying" :delay="delay" @end="end" />
+    <Results v-if="showResults" :delay="delay" :score="score" />
+  </div>
 </template>
 
 <script>
@@ -20,20 +22,20 @@ export default {
       delay: null,
       isPlaying: false,
       score: null,
-      showResults: false
+      showResults: false,
     };
   },
   methods: {
     start() {
       this.delay = 1000 + Math.random() * 6000;
       this.isPlaying = true;
-      this.showResults = false
+      this.showResults = false;
     },
     end(reactionTime) {
-      this.score = reactionTime
-      this.isPlaying = false
-      this.showResults = true
-    }
+      this.score = reactionTime;
+      this.isPlaying = false;
+      this.showResults = true;
+    },
   },
 };
 </script>

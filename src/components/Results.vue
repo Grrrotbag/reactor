@@ -3,7 +3,8 @@
     <h2>These are the results:</h2>
     <ul>
       <li>
-        The box appeared after: <strong>{{ ((delay % 60000) / 1000).toFixed(2) }} seconds</strong>
+        The box appeared after:
+        <strong>{{ ((delay % 60000) / 1000).toFixed(2) }} seconds</strong>
       </li>
       <li>
         You reacted in <strong>{{ score }}ms</strong>. That is
