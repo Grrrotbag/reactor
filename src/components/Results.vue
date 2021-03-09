@@ -21,9 +21,13 @@ export default {
   mounted() {
     if (this.score < 250) {
       this.ranking = "Superb reactions. You are a zen master."
-      } else if (this.score > 250) {
-        this.ranking = "Were you asleep?"
-        }
+      } else if (this.score < 350) {
+        this.ranking = "Not too shabby."
+        } else if (this.score < 450) {
+          this.ranking = "Getting a little slow in your old age?"
+          } else {
+            this.ranking = "What, were you asleep or something?"
+          }
   },
 };
 </script>
