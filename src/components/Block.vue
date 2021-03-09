@@ -1,6 +1,6 @@
 <template>
   <div id="clickBlock" v-if="showBlock" @click="stopTimer">
-    I'm the click block
+    Click me as fast as you can!
   </div>
 </template>
 
@@ -23,6 +23,7 @@ export default {
     stopTimer() {
       clearInterval(this.timer);
       console.log("reaction time: ", this.reactionTime + "ms");
+      this.$emit('end', this.reactionTime)
     },
   },
   mounted() {
