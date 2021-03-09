@@ -1,7 +1,7 @@
 <template>
-  <div class="flex bg-gray-50">
+  <div class="flex bg-gray-500">
     <h1>Reactor</h1>
-    <button @click="start" :disabled="isPlaying">start game</button>
+    <button class="rounded" @click="start" :disabled="isPlaying">start game</button>
     <Block v-if="isPlaying" :delay="delay" @end="end" />
     <Results v-if="showResults" :delay="delay" :score="score" />
   </div>
