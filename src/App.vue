@@ -1,7 +1,7 @@
 <template>
   <h1>Reactor</h1>
-  <button @click="start">start</button>
-  <Block v-if="isPlaying" />
+  <button @click="start" :disabled="isPlaying">start</button>
+  <Block v-if="isPlaying" :delay="delay" />
   <Results />
 </template>
 
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      delay: 0,
+      delay: null,
       isPlaying: false,
     };
   },
@@ -25,7 +25,6 @@ export default {
     start() {
       this.delay = 1000 + Math.random() * 6000;
       this.isPlaying = true;
-      console.log(this.delay);
     },
   },
 };
