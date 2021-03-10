@@ -1,6 +1,6 @@
 <template>
-  <div id="clickBlock" v-if="showBlock" @click="stopTimer">
-    Click me as fast as you can!
+  <div class="rounded w-96 h-96 bg-green-500 flex items-center justify-center" v-if="show" @click="stopTimer">
+    <h3 class="text-white text-4xl font-bold">Click!</h3>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   props: ["delay"],
   data() {
     return {
-      showBlock: false,
+      show: false,
       timer: null,
       reactionTime: 0,
     };
@@ -28,7 +28,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.showBlock = true;
+      this.show = true;
       this.startTimer();
       console.log("delay: ", this.delay);
     }, this.delay);
@@ -36,11 +36,4 @@ export default {
 };
 </script>
 
-<style>
-#clickBlock {
-  background: red;
-  width: 50%;
-  height: 500px;
-  border-radius: 20px;
-}
-</style>
+<style></style>

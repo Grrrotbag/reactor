@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>These are the results:</h2>
     <ul>
       <li>
         The box appeared after:
@@ -11,7 +10,7 @@
         <strong>{{ ((score % 60000) / 1000).toFixed(2) }} seconds</strong>.
       </li>
     </ul>
-    <p>{{ ranking }}</p>
+    <p class="text-xl font-bold">{{ ranking }}</p>
   </div>
 </template>
 
