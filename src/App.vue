@@ -1,7 +1,13 @@
 <template>
-  <div class="flex bg-gray-50">
-    <h1>Reactor</h1>
-    <button @click="start" :disabled="isPlaying">start game</button>
+  <div class="flex items-center justify-center container flex-col">
+    <h1 class="text-5xl font-black font-sans mb-7">Reactor</h1>
+    <button
+      class="w-40 bg-blue-500 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-2 px-4 rounded"
+      @click="start"
+      :disabled="isPlaying"
+    >
+      start game
+    </button>
     <Block v-if="isPlaying" :delay="delay" @end="end" />
     <Results v-if="showResults" :delay="delay" :score="score" />
   </div>
@@ -40,16 +46,4 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
