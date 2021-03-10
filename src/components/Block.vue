@@ -1,6 +1,6 @@
 <template>
-  <div class="rounded w-96 h-96 bg-green-500 flex items-center justify-center" v-if="show" @click="stopTimer">
-    <h3 class="text-white text-4xl font-bold">Click!</h3>
+  <div class="clickBlock" v-if="show" @click="stopTimer">
+    <h3 class="clickText">Click!</h3>
   </div>
 </template>
 
@@ -36,4 +36,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.clickBlock {
+  width: 100%;
+  height: 7em;
+  background: red;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clickText {
+  color: white;
+}
+</style>

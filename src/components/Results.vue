@@ -10,7 +10,7 @@
         <strong>{{ ((score % 60000) / 1000).toFixed(2) }} seconds</strong>.
       </li>
     </ul>
-    <p class="text-xl font-bold">{{ ranking }}</p>
+    <p class="rankingText">{{ ranking }}</p>
   </div>
 </template>
 
@@ -42,5 +42,9 @@ export default {
 <style>
 ul {
   list-style-type: none;
+  padding-left: 0;
+}
+.rankingText {
+  font-size: 2em;
 }
 </style>
