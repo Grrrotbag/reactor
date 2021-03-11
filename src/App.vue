@@ -4,6 +4,12 @@
     <!-- <hr /> -->
   </header>
   <main>
+    <p>
+      Reactor is a game to test your reaction speed. When you click the start button, a timer will begin to countdown.
+      This timer will be random &mdash; between 2 and 6 seconds. At the end of the timer, an atom will appear on screen.
+      Click at as soon as you see it.
+    </p>
+
     <button @click="start" :disabled="isPlaying">
       start game
     </button>
@@ -46,9 +52,28 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 #app {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
@@ -57,32 +82,29 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 760px;
-  margin: auto;
 }
 header {
+  font-family: "Atomic Age", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100px;
   margin-bottom: 1em;
-  background: linear-gradient(to right, #a3ddc7 0%, #fdffc6 50%, #ef897f 100%);
   text-transform: uppercase;
 }
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-}
-hr {
-  margin: 0;
-  align-self: stretch;
-  margin-bottom: 1em;
+  width: 760px;
+  height: 100vh;
+  margin: auto;
 }
 button {
-  background-color: #4caf50;
+  background-color: #ef897f;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   /* background: linear-gradient(to right, #a3ddc7 0%, #fdffc6 50%, #ef897f 100%); */
   border: none;
   color: ivory;
@@ -103,7 +125,7 @@ button:disabled {
   color: darkgray;
 }
 button:enabled:hover {
-  background-color: green;
+  background-color: #ef899f;
   /* background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%); */
 }
 </style>

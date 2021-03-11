@@ -38,15 +38,21 @@ export default {
 
 <style>
 .clickBlock {
-  width: 100%;
-  height: 7em;
-  background: red;
-  border-radius: 5px;
+  /* :white-space: ; */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
 }
 .clickText {
+  font-family: "Atomic Age", cursive;
   color: white;
 }
 </style>
