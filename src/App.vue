@@ -85,12 +85,13 @@ body {
 }
 header {
   font-family: "Atomic Age", cursive;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100px;
-  margin-bottom: 1em;
+  margin: 1em 0;
   text-transform: uppercase;
 }
 main {
