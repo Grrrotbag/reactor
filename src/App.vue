@@ -4,11 +4,11 @@
     <!-- <hr /> -->
   </header>
   <main>
-    <p>
+    <h4 class="subheading">
       Reactor is a game to test your reaction speed. When you click the start button, a timer will begin to countdown.
       This timer will be random &mdash; between 2 and 6 seconds. At the end of the timer, an atom will appear on screen.
       Click at as soon as you see it.
-    </p>
+    </h4>
 
     <button @click="start" :disabled="isPlaying">
       start game
@@ -101,6 +101,9 @@ main {
   width: 760px;
   height: 100vh;
   margin: auto;
+}
+.subheading {
+  margin-bottom: 1em;
 }
 button {
   background-color: #ef897f;
