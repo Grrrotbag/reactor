@@ -11,20 +11,20 @@
     </h4>
     <GkButton @click="start" :disabled="isPlaying" text="start" bgColor="#ef897f" />
 
-    <Block v-if="isPlaying" :delay="delay" @end="end" />
+    <Atom v-if="isPlaying" :delay="delay" @end="end" />
     <Results v-if="showResults" :delay="delay" :score="score" />
   </main>
 </template>
 
 <script>
-import Block from "./components/Atom.vue";
+import Atom from "./components/Atom.vue";
 import Results from "./components/Results.vue";
 import GkButton from "gk-button";
 
 export default {
   name: "App",
   components: {
-    Block,
+    Atom,
     Results,
     GkButton,
   },

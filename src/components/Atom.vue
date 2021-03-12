@@ -1,6 +1,6 @@
 <template>
-  <div class="clickBlock" v-if="show" @click="stopTimer">
-    <h3 class="clickText">Click!</h3>
+  <div class="atom" v-if="show" @click="stopTimer">
+    <h3 class="atomText">Click!</h3>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style>
-.clickBlock {
+.atom {
   /* :white-space: ; */
   display: flex;
   justify-content: center;
@@ -50,8 +50,9 @@ export default {
   border-radius: 50%;
   box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f,
     inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+  cursor: pointer;
 }
-.clickText {
+.atomText {
   font-family: "Atomic Age", cursive;
   color: white;
 }
